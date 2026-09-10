@@ -20,6 +20,7 @@ import {
 } from '../../../elements/commerce/product-collection/product-collection';
 import {ProductDiscountCallout} from '../../../elements/commerce/product-discount-callout/product-discount-callout';
 import {ProductOffer} from '../../../elements/commerce/product-offer/product-offer';
+import {Tear} from '../../../elements/commerce/tear/tear';
 import {HorizontalBarChart} from '../../../elements/data/horizontal-bar-chart/horizontal-bar-chart';
 import {LineChart} from '../../../elements/data/line-chart/line-chart';
 import {NumberCounter} from '../../../elements/data/number-counter/number-counter';
@@ -435,6 +436,28 @@ const elementImplementations = [
 		safeArea: 90,
 		installationMode: 'wrapped',
 		width: 1080,
+	},
+	{
+		slug: 'commerce/tear',
+		component: Tear,
+		contributors: [],
+		description:
+			'A 16:9 graphic that splits apart along an animated jagged seam.',
+		dependencies: [{name: '@remotion/effects', version: null}],
+		durationInFrames: 45,
+		elementHeight: 720,
+		elementWidth: 1280,
+		fps: 30,
+		height: 1080,
+		posterFrame: 25,
+		preview: {
+			previewLayout: 'composition',
+			posterUrl: 'https://remotion.media/elements/commerce-tear-preview.png',
+			videoUrl: 'https://remotion.media/elements/commerce-tear-preview.mp4',
+		},
+		safeArea: 0,
+		installationMode: 'wrapped',
+		width: 1920,
 	},
 	{
 		slug: 'data/horizontal-bar-chart',

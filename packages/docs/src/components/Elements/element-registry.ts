@@ -70,6 +70,10 @@ export const elementRegistry = {
 		category: 'commerce',
 		displayName: 'Product Offer',
 	},
+	'commerce/tear': {
+		category: 'commerce',
+		displayName: 'Tear',
+	},
 	'data/horizontal-bar-chart': {
 		category: 'data',
 		displayName: 'Horizontal Bar Chart',

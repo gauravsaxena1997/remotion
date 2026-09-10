@@ -606,6 +606,7 @@ describe('Elements sidebar', () => {
 					'commerce/product-collection/index',
 					'commerce/product-discount-callout/index',
 					'commerce/product-offer/index',
+					'commerce/tear/index',
 				],
 			},
 			{

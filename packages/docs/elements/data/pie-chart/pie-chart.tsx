@@ -9,7 +9,7 @@ const {fontFamily} = loadFont('normal', {
 
 const data = [
 	{
-		color: '#0b84f3',
+		color: '#2563eb',
 		foreground: '#ffffff',
 		label: 'Focused work',
 		value: 42,

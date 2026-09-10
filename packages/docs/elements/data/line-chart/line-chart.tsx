@@ -183,7 +183,7 @@ export const LineChart: React.FC = () => {
 							d={linePath}
 							fill="none"
 							pathLength={1}
-							stroke="#0b84f3"
+							stroke="#2563eb"
 							strokeDasharray="1 1"
 							strokeDashoffset={interpolate(frame, [14, 58], [1, 0], {
 								easing: Easing.bezier(0, 0, 0.58, 1),
@@ -197,7 +197,7 @@ export const LineChart: React.FC = () => {
 						<Interactive.G
 							name="Data points"
 							fill="#ffffff"
-							stroke="#0b84f3"
+							stroke="#2563eb"
 							strokeWidth={8}
 						>
 							{points.map(({label, x, y}, index) => (
@@ -266,7 +266,7 @@ export const LineChart: React.FC = () => {
 						<Interactive.Div
 							name="Latest value"
 							style={{
-								backgroundColor: '#0b84f3',
+								backgroundColor: '#2563eb',
 								borderRadius: 12,
 								color: '#ffffff',
 								fontSize: 44,

@@ -52,12 +52,12 @@ export const LocationLowerThird: React.FC = () => {
 				<path
 					d="M32 3C15.4 3 4 15.4 4 31C4 50.8 22.1 69.6 29.3 76.2C30.8 77.6 33.2 77.6 34.7 76.2C41.9 69.6 60 50.8 60 31C60 15.4 48.6 3 32 3Z"
 					pathLength="1"
-					fill="#0b84f3"
+					fill="#2563eb"
 					fillOpacity={interpolate(frame, [5, 18, 105, 114], [0, 1, 1, 0], {
 						extrapolateLeft: 'clamp',
 						extrapolateRight: 'clamp',
 					})}
-					stroke="#0b84f3"
+					stroke="#2563eb"
 					strokeDasharray="1"
 					strokeDashoffset={interpolate(
 						frame,

@@ -65,7 +65,7 @@ export const ProductDiscountCallout = () => {
 					viewBox={`0 0 ${discountCallout.width} ${discountCallout.height}`}
 					xmlns="http://www.w3.org/2000/svg"
 				>
-					<path d={discountCallout.path} fill="#0b84f3" />
+					<path d={discountCallout.path} fill="#2563eb" />
 				</svg>
 				<Interactive.Div
 					name="Discount text"

@@ -6,32 +6,10 @@ import {
 	Interactive,
 	interpolate,
 	useCurrentFrame,
-	useVideoConfig,
 } from 'remotion';
-
-const TARGET_SCALE = 0.38;
-const TARGET_HORIZONTAL_CROP = 0.335;
-const TARGET_VERTICAL_CROP = 0.06;
-const TARGET_MARGIN = 48;
 
 export const PictureInPictureTransition: React.FC = () => {
 	const frame = useCurrentFrame();
-	const {height, width} = useVideoConfig();
-	const progress = interpolate(frame, [15, 50, 100, 135], [0, 1, 1, 0], {
-		easing: [
-			Easing.bezier(0.65, 0, 0.35, 1),
-			Easing.linear,
-			Easing.bezier(0.65, 0, 0.35, 1),
-		],
-		extrapolateLeft: 'clamp',
-		extrapolateRight: 'clamp',
-	});
-	const horizontalCrop = TARGET_HORIZONTAL_CROP * progress;
-	const verticalCrop = TARGET_VERTICAL_CROP * progress;
-	const scale = interpolate(progress, [0, 1], [1, TARGET_SCALE]);
-	const targetX =
-		width - TARGET_MARGIN - (1 - TARGET_HORIZONTAL_CROP) * width * TARGET_SCALE;
-	const targetY = TARGET_MARGIN - TARGET_VERTICAL_CROP * height * TARGET_SCALE;
 
 	return (
 		<AbsoluteFill style={{overflow: 'hidden'}}>
@@ -65,28 +43,119 @@ export const PictureInPictureTransition: React.FC = () => {
 			</Interactive.Div>
 
 			<Interactive.Div
-				cropBottom={verticalCrop}
-				cropLeft={horizontalCrop}
-				cropRight={horizontalCrop}
-				cropTop={verticalCrop}
+				cropBottom={interpolate(frame, [15, 50], [0, 0.06], {
+					easing: [
+						Easing.spring({
+							damping: 200,
+							mass: 1,
+							stiffness: 100,
+							allowTail: true,
+							durationRestThreshold: 0.02,
+							overshootClamping: false,
+						}),
+					],
+					extrapolateLeft: 'clamp',
+					extrapolateRight: 'clamp',
+				})}
+				cropLeft={interpolate(frame, [15, 50], [0, 0.302], {
+					easing: [
+						Easing.spring({
+							damping: 200,
+							mass: 1,
+							stiffness: 100,
+							allowTail: true,
+							durationRestThreshold: 0.02,
+							overshootClamping: false,
+						}),
+					],
+					extrapolateLeft: 'clamp',
+					extrapolateRight: 'clamp',
+				})}
+				cropRight={interpolate(frame, [15, 50], [0, 0.302], {
+					easing: [
+						Easing.spring({
+							damping: 200,
+							mass: 1,
+							stiffness: 100,
+							allowTail: true,
+							durationRestThreshold: 0.02,
+							overshootClamping: false,
+						}),
+					],
+					extrapolateLeft: 'clamp',
+					extrapolateRight: 'clamp',
+				})}
+				cropTop={interpolate(frame, [15, 50], [0, 0.06], {
+					easing: [
+						Easing.spring({
+							damping: 200,
+							mass: 1,
+							stiffness: 100,
+							allowTail: true,
+							durationRestThreshold: 0.02,
+							overshootClamping: false,
+						}),
+					],
+					extrapolateLeft: 'clamp',
+					extrapolateRight: 'clamp',
+				})}
 				name="Scene A"
 				style={{
 					alignItems: 'center',
-					borderRadius: interpolate(progress, [0, 1], [0, 48]),
+					borderRadius: interpolate(frame, [15, 50], [0, 48], {
+						easing: [
+							Easing.spring({
+								damping: 200,
+								mass: 1,
+								stiffness: 100,
+								allowTail: true,
+								durationRestThreshold: 0.02,
+								overshootClamping: false,
+							}),
+						],
+						extrapolateLeft: 'clamp',
+						extrapolateRight: 'clamp',
+					}),
 					color: '#ffffff',
 					display: 'flex',
 					fontFamily: 'sans-serif',
 					fontSize: 240,
 					fontWeight: 900,
-					height,
+					height: '100%',
 					justifyContent: 'center',
 					overflow: 'hidden',
 					position: 'absolute',
-					scale,
+					scale: interpolate(frame, [15, 50], [1, 0.38], {
+						easing: [
+							Easing.spring({
+								damping: 200,
+								mass: 1,
+								stiffness: 100,
+								allowTail: true,
+								durationRestThreshold: 0.02,
+								overshootClamping: false,
+							}),
+						],
+						extrapolateLeft: 'clamp',
+						extrapolateRight: 'clamp',
+					}),
 					textShadow: '0 4px 30px rgba(0, 0, 0, 0.55)',
 					transformOrigin: 'top left',
-					translate: `${targetX * progress}px ${targetY * progress}px`,
-					width,
+					translate: interpolate(frame, [15, 50], ['0px 0px', '1363px 23px'], {
+						easing: [
+							Easing.spring({
+								damping: 200,
+								mass: 1,
+								stiffness: 100,
+								allowTail: true,
+								durationRestThreshold: 0.02,
+								overshootClamping: false,
+							}),
+						],
+						extrapolateLeft: 'clamp',
+						extrapolateRight: 'clamp',
+					}),
+					width: '100%',
 					willChange: 'transform',
 				}}
 			>

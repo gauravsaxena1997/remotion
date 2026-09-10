@@ -70,7 +70,7 @@ export const ElementPreviewComposition: React.FC<{
 							width: elementWidth,
 						}}
 					>
-						<Component />
+						<Component platform={'tiktok'} />
 					</div>
 				</div>
 			</Sequence>

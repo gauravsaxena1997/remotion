@@ -706,7 +706,7 @@ const elementImplementations = [
 		component: NewsArticleHighlight,
 		contributors: [],
 		description:
-			'A framed news article with camera movement, blur, and animated passage highlights.',
+			'A gently panning news headline with animated passage highlights.',
 		dependencies: [{name: '@remotion/rough-notation', version: null}],
 		durationInFrames: 150,
 		elementHeight: null,

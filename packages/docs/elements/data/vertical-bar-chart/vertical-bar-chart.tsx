@@ -123,7 +123,7 @@ const Bar: React.FC<{
 						<Interactive.Div
 							name="Bar"
 							style={{
-								backgroundColor: highlighted ? '#2858e8' : '#b9c0ca',
+								backgroundColor: highlighted ? '#0b84f3' : '#b9c0ca',
 								borderRadius: '12px 12px 0 0',
 								height: '100%',
 								width: '100%',

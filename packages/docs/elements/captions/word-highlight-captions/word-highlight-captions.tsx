@@ -33,7 +33,7 @@ type WordHighlightCaptionsProps = InteractiveBaseProps &
 const desiredFontSize = 80;
 const fontWeight = '700';
 const textColor = '#ffffff';
-const highlightColor = '#2858e8';
+const highlightColor = '#0b84f3';
 const defaultCombineTokensWithinMilliseconds = 800;
 
 const wordHighlightCaptionsSchema = {

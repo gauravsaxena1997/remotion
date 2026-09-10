@@ -34,7 +34,7 @@ const Bar: React.FC<{
 			name={'Bar'}
 			style={{
 				alignItems: 'center',
-				backgroundColor: highlighted ? '#2858e8' : '#d1d5db',
+				backgroundColor: highlighted ? '#0b84f3' : '#d1d5db',
 				borderRadius: 12,
 				boxSizing: 'border-box',
 				color: highlighted ? '#ffffff' : '#111827',

@@ -366,8 +366,7 @@ const elementImplementations = [
 		slug: 'commerce/product-collection',
 		component: ProductCollection,
 		contributors: [],
-		description:
-			'An animated product carousel that adapts to changing catalog images, titles, prices, and promotions.',
+		description: 'An animated carousel of three customizable cards.',
 		dependencies: [{name: '@remotion/google-fonts', version: null}],
 		durationInFrames: productCollectionDurationInFrames,
 		elementHeight: 1020,
@@ -391,14 +390,14 @@ const elementImplementations = [
 		component: ProductDiscountCallout,
 		contributors: [],
 		description:
-			'An animated product cutout with pricing and a hinged discount callout.',
+			'A large animated discount callout for highlighting promotional offers.',
 		dependencies: [
 			{name: '@remotion/google-fonts', version: null},
 			{name: '@remotion/shapes', version: null},
 		],
 		durationInFrames: 120,
-		elementHeight: 650,
-		elementWidth: 900,
+		elementHeight: 760,
+		elementWidth: 1020,
 		fps: 30,
 		height: 1080,
 		posterFrame: 57,

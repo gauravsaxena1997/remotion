@@ -35,7 +35,7 @@ type PoppingWordCaptionsProps = InteractiveBaseProps &
 const desiredFontSize = 80;
 const fontWeight = '700';
 const textColor = '#ffffff';
-const highlightColor = '#4da3ff';
+const highlightColor = '#2858e8';
 const activeWordScale = 1.03;
 const defaultCombineTokensWithinMilliseconds = 800;
 

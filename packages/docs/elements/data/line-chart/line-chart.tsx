@@ -56,9 +56,7 @@ export const LineChart: React.FC = () => {
 
 		return `${path} L ${x} ${y}`;
 	}, '');
-	const firstPoint = points[0];
 	const latestPoint = points[points.length - 1];
-	const areaPath = `${linePath} L ${latestPoint.x} ${CHART_HEIGHT} L ${firstPoint.x} ${CHART_HEIGHT} Z`;
 
 	return (
 		<Interactive.Div
@@ -180,17 +178,6 @@ export const LineChart: React.FC = () => {
 								);
 							})}
 						</Interactive.G>
-						<Interactive.Path
-							name="Area fill"
-							d={areaPath}
-							fill="#2858e8"
-							style={{
-								opacity: interpolate(frame, [48, 68], [0, 0.1], {
-									extrapolateLeft: 'clamp',
-									extrapolateRight: 'clamp',
-								}),
-							}}
-						/>
 						<Interactive.Path
 							name="Trend line"
 							d={linePath}

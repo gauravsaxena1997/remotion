@@ -63,7 +63,7 @@ export const NewsArticleHighlight: React.FC = () => {
 						extrapolateLeft: 'clamp',
 						extrapolateRight: 'clamp',
 					})}px)`,
-					height: 760,
+					height: 458,
 					opacity: interpolate(frame, [125, 149], [1, 0], {
 						easing: Easing.in(Easing.cubic),
 						extrapolateLeft: 'clamp',
@@ -111,53 +111,17 @@ export const NewsArticleHighlight: React.FC = () => {
 							style={{
 								backfaceVisibility: 'hidden',
 								backgroundColor: '#ffffff',
-								border: '1px solid #d9d9d6',
-								boxShadow: '0 32px 80px rgba(24, 24, 20, 0.13)',
 								boxSizing: 'border-box',
 								color: '#181816',
 								display: 'flex',
 								flexDirection: 'column',
 								height: '100%',
-								padding: '54px 84px 62px',
+								padding: '54px 84px 0',
 								transform: 'translateZ(0)',
 								width: '100%',
 								willChange: 'transform',
 							}}
 						>
-							<header
-								style={{
-									alignItems: 'center',
-									borderBottom: '2px solid #181816',
-									display: 'flex',
-									fontFamily: 'Arial, Helvetica, sans-serif',
-									justifyContent: 'space-between',
-									paddingBottom: 18,
-								}}
-							>
-								<Interactive.Div
-									name="Publication name"
-									style={{
-										fontSize: 18,
-										fontWeight: 700,
-										letterSpacing: 3.8,
-									}}
-								>
-									THE MORNING REPORT
-								</Interactive.Div>
-								<Interactive.Div
-									name="Issue details"
-									style={{
-										color: '#696965',
-										fontSize: 14,
-										fontWeight: 600,
-										letterSpacing: 1.7,
-										textTransform: 'uppercase',
-									}}
-								>
-									Tuesday · National affairs
-								</Interactive.Div>
-							</header>
-
 							<Interactive.Div
 								name="Article category"
 								style={{
@@ -166,7 +130,6 @@ export const NewsArticleHighlight: React.FC = () => {
 									fontSize: 15,
 									fontWeight: 700,
 									letterSpacing: 2.6,
-									marginTop: 32,
 									textTransform: 'uppercase',
 								}}
 							>
@@ -256,30 +219,6 @@ export const NewsArticleHighlight: React.FC = () => {
 									'Negotiators returned to the Capitol with the deadline\napproaching, but leaders remained divided over a short-term spending agreement.'
 								}
 							</Interactive.P>
-
-							<div
-								style={{
-									alignItems: 'center',
-									borderTop: '1px solid #d9d9d6',
-									color: '#696965',
-									display: 'flex',
-									fontFamily: 'Arial, Helvetica, sans-serif',
-									fontSize: 14,
-									fontWeight: 600,
-									justifyContent: 'space-between',
-									letterSpacing: 1.3,
-									marginTop: 'auto',
-									paddingTop: 22,
-									textTransform: 'uppercase',
-								}}
-							>
-								<Interactive.Span name="Byline">
-									By Elena Ward · Washington
-								</Interactive.Span>
-								<Interactive.Span name="Reading time">
-									6 minute read
-								</Interactive.Span>
-							</div>
 						</article>
 					</div>
 				</div>

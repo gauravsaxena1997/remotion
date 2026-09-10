@@ -102,25 +102,41 @@ export const LocationLowerThird: React.FC = () => {
 						height: 82,
 						display: 'flex',
 						alignItems: 'center',
-						overflow: 'hidden',
 					}}
 				>
 					<Interactive.Div
 						cropRight={interpolate(frame, [14, 38, 88, 108], [1, 0, 0, 1], {
 							extrapolateLeft: 'clamp',
 							extrapolateRight: 'clamp',
+
+							easing: [
+								Easing.spring({
+									damping: 200,
+									mass: 1,
+									stiffness: 100,
+									allowTail: true,
+									durationRestThreshold: 0.02,
+									overshootClamping: false,
+								}),
+								Easing.linear,
+								Easing.spring({
+									damping: 200,
+									mass: 1,
+									stiffness: 100,
+									allowTail: true,
+									durationRestThreshold: 0.02,
+									overshootClamping: false,
+								}),
+							],
 						})}
 						name="Location"
 						dir="auto"
 						style={{
 							minWidth: 0,
-							maxWidth: 440,
-							overflow: 'hidden',
 							color: '#18181b',
 							fontSize: 54,
 							fontWeight: 700,
 							letterSpacing: -1,
-							lineHeight: 1,
 							textOverflow: 'ellipsis',
 							whiteSpace: 'nowrap',
 							opacity: interpolate(frame, [14, 22, 98, 110], [0, 1, 1, 0], {

@@ -7,6 +7,7 @@ import {MirroredAudioSpectrum} from '../../../elements/audio/mirrored-spectrum/m
 import {AudioOscilloscope} from '../../../elements/audio/oscilloscope/audio-oscilloscope';
 import {AudioWaveformProgress} from '../../../elements/audio/waveform-progress/audio-waveform-progress';
 import {LiquidContours} from '../../../elements/backgrounds/liquid-contours/liquid-contours';
+import {MovingWaves} from '../../../elements/backgrounds/moving-waves/moving-waves';
 import {NotebookPaper} from '../../../elements/backgrounds/notebook-paper/notebook-paper';
 import {PaperTexture} from '../../../elements/backgrounds/paper-texture/paper-texture';
 import {RotatingStarburst} from '../../../elements/backgrounds/rotating-starburst/rotating-starburst';
@@ -19,7 +20,6 @@ import {
 	productCollectionDurationInFrames,
 } from '../../../elements/commerce/product-collection/product-collection';
 import {ProductDiscountCallout} from '../../../elements/commerce/product-discount-callout/product-discount-callout';
-import {ProductOffer} from '../../../elements/commerce/product-offer/product-offer';
 import {Tear} from '../../../elements/commerce/tear/tear';
 import {HorizontalBarChart} from '../../../elements/data/horizontal-bar-chart/horizontal-bar-chart';
 import {LineChart} from '../../../elements/data/line-chart/line-chart';
@@ -87,8 +87,7 @@ const elementImplementations = [
 		slug: 'audio/oscilloscope',
 		component: AudioOscilloscope,
 		contributors: [{username: 'samohovets', contribution: 'Author'}],
-		description:
-			'An oscilloscope waveform for visualizing voices, podcasts, and other audio.',
+		description: 'Suitable for visualizing speech.',
 		dependencies: [
 			{name: '@remotion/media', version: null},
 			{name: '@remotion/media-utils', version: null},
@@ -114,7 +113,7 @@ const elementImplementations = [
 		slug: 'audio/waveform-progress',
 		component: AudioWaveformProgress,
 		contributors: [{username: 'samohovets', contribution: 'Author'}],
-		description: 'A full-clip audio waveform with played progress.',
+		description: 'A static audio waveform with playback progress.',
 		dependencies: [
 			{name: '@remotion/media', version: null},
 			{name: '@remotion/media-utils', version: null},
@@ -140,8 +139,7 @@ const elementImplementations = [
 		slug: 'audio/mirrored-spectrum',
 		component: MirroredAudioSpectrum,
 		contributors: [{username: 'JonnyBurger', contribution: 'Author'}],
-		description:
-			'A mirrored frequency spectrum that works well for visualizing voices and podcasts.',
+		description: 'Suitable for both music and speech visualization.',
 		dependencies: [
 			{name: '@remotion/media', version: null},
 			{name: '@remotion/media-utils', version: null},
@@ -228,6 +226,29 @@ const elementImplementations = [
 				'https://remotion.media/elements/backgrounds-rotating-starburst-preview.png',
 			videoUrl:
 				'https://remotion.media/elements/backgrounds-rotating-starburst-preview.mp4',
+		},
+		safeArea: 0,
+		installationMode: 'wrapped',
+		width: 1920,
+	},
+	{
+		slug: 'backgrounds/moving-waves',
+		component: MovingWaves,
+		contributors: [],
+		description: 'A seamless wave background that flows upward.',
+		dependencies: [{name: '@remotion/effects', version: null}],
+		durationInFrames: 240,
+		elementHeight: null,
+		elementWidth: null,
+		fps: 30,
+		height: 1080,
+		posterFrame: 120,
+		preview: {
+			previewLayout: 'composition',
+			posterUrl:
+				'https://remotion.media/elements/backgrounds-moving-waves-preview.png',
+			videoUrl:
+				'https://remotion.media/elements/backgrounds-moving-waves-preview.mp4',
 		},
 		safeArea: 0,
 		installationMode: 'wrapped',
@@ -367,14 +388,14 @@ const elementImplementations = [
 		slug: 'commerce/product-collection',
 		component: ProductCollection,
 		contributors: [],
-		description: 'An animated carousel of three customizable cards.',
+		description: 'Three cards which each take center once.',
 		dependencies: [{name: '@remotion/google-fonts', version: null}],
 		durationInFrames: productCollectionDurationInFrames,
 		elementHeight: 1020,
 		elementWidth: 1020,
 		fps: 30,
 		height: 1080,
-		posterFrame: 90,
+		posterFrame: 73,
 		preview: {
 			previewLayout: 'composition',
 			posterUrl:
@@ -390,15 +411,14 @@ const elementImplementations = [
 		slug: 'commerce/product-discount-callout',
 		component: ProductDiscountCallout,
 		contributors: [],
-		description:
-			'A large animated discount callout for highlighting promotional offers.',
+		description: 'An attention-grabbing speech bubble.',
 		dependencies: [
 			{name: '@remotion/google-fonts', version: null},
 			{name: '@remotion/shapes', version: null},
 		],
 		durationInFrames: 120,
 		elementHeight: 760,
-		elementWidth: 1020,
+		elementWidth: 760,
 		fps: 30,
 		height: 1080,
 		posterFrame: 57,
@@ -414,35 +434,10 @@ const elementImplementations = [
 		width: 1080,
 	},
 	{
-		slug: 'commerce/product-offer',
-		component: ProductOffer,
-		contributors: [],
-		description:
-			'An animated product card with a bold title, catalog image, pricing, and discount.',
-		dependencies: [{name: '@remotion/google-fonts', version: null}],
-		durationInFrames: 150,
-		elementHeight: 900,
-		elementWidth: 900,
-		fps: 30,
-		height: 1080,
-		posterFrame: 75,
-		preview: {
-			previewLayout: 'composition',
-			posterUrl:
-				'https://remotion.media/elements/commerce-product-offer-preview.png',
-			videoUrl:
-				'https://remotion.media/elements/commerce-product-offer-preview.mp4',
-		},
-		safeArea: 90,
-		installationMode: 'wrapped',
-		width: 1080,
-	},
-	{
 		slug: 'commerce/tear',
 		component: Tear,
 		contributors: [],
-		description:
-			'A 16:9 graphic that splits apart along an animated jagged seam.',
+		description: 'A tear effect that can be applied to any content.',
 		dependencies: [{name: '@remotion/effects', version: null}],
 		durationInFrames: 45,
 		elementHeight: 720,

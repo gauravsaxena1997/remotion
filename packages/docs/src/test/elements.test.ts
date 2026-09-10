@@ -563,9 +563,9 @@ describe('Elements sidebar', () => {
 				category: 'audio',
 				label: 'Audio',
 				items: [
+					'audio/mirrored-spectrum/index',
 					'audio/oscilloscope/index',
 					'audio/waveform-progress/index',
-					'audio/mirrored-spectrum/index',
 				],
 			},
 			{
@@ -573,6 +573,7 @@ describe('Elements sidebar', () => {
 				label: 'Backgrounds',
 				items: [
 					'backgrounds/liquid-contours/index',
+					'backgrounds/moving-waves/index',
 					'backgrounds/notebook-paper/index',
 					'backgrounds/paper-texture/index',
 					'backgrounds/rotating-starburst/index',
@@ -601,12 +602,11 @@ describe('Elements sidebar', () => {
 			},
 			{
 				category: 'commerce',
-				label: 'Commerce',
+				label: 'Effects',
 				items: [
 					'commerce/product-collection/index',
-					'commerce/product-discount-callout/index',
-					'commerce/product-offer/index',
 					'commerce/tear/index',
+					'commerce/product-discount-callout/index',
 				],
 			},
 			{

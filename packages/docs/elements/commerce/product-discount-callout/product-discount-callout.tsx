@@ -11,7 +11,7 @@ loadFont('normal', {
 export const ProductDiscountCallout = () => {
 	const frame = useCurrentFrame();
 	const discountCallout = makeCallout({
-		width: 860,
+		width: 600,
 		height: 300,
 		pointerLength: 70,
 		pointerBaseWidth: 130,
@@ -41,7 +41,7 @@ export const ProductDiscountCallout = () => {
 					position: 'absolute',
 					rotate: interpolate(
 						frame,
-						[50, 57, 64, 70, 76],
+						[0, 7, 14, 20, 26],
 						['0deg', '10deg', '-7deg', '3deg', '0deg'],
 						{
 							easing: Easing.inOut(Easing.quad),
@@ -51,7 +51,7 @@ export const ProductDiscountCallout = () => {
 					),
 					top: 195,
 					transformOrigin: '50% 100%',
-					width: 860,
+					width: 600,
 					willChange: 'transform',
 				}}
 			>

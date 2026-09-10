@@ -32,15 +32,12 @@
 	min-width: 0;
 	flex-direction: column;
 	overflow: hidden;
-	border: 1px solid var(--ifm-color-emphasis-300);
-	border-radius: min(3vw, 12px);
 	background: var(--ifm-background-surface-color);
 	color: var(--ifm-font-color-base);
 	text-decoration: none;
 }
 
 .library .card:hover {
-	border-color: var(--ifm-color-primary);
 	color: var(--ifm-font-color-base);
 	text-decoration: none;
 }
@@ -55,6 +52,7 @@
 	position: relative;
 	aspect-ratio: 16 / 9;
 	overflow: hidden;
+	border-radius: 8px;
 }
 
 .previewMedia {
@@ -69,27 +67,24 @@
 
 .content {
 	min-width: 0;
-	padding: 18px;
+	padding: 18px 0;
 }
 
 .title {
 	display: block;
 	margin: 0;
+	font-family: 'GTPlanar';
 	font-size: 1.125rem;
 	font-weight: 500;
 	text-wrap: balance;
 }
 
 .description {
-	margin: 10px 0 0;
+	margin: 2px 0 0;
 	color: var(--ifm-color-emphasis-800);
 	font-size: 1rem;
 	line-height: 1.6;
 	text-wrap: pretty;
-}
-
-.card:hover .title {
-	color: var(--ifm-color-primary);
 }
 
 @container element-library (min-width: 600px) {
@@ -99,7 +94,7 @@
 	}
 
 	.content {
-		padding: 16px;
+		padding: 16px 0;
 	}
 
 	.title {

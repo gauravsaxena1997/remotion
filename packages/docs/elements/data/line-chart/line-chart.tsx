@@ -17,8 +17,8 @@ const data = [
 	{label: 'Sep', value: 74},
 ];
 
-const CHART_WIDTH = 1400;
-const CHART_HEIGHT = 520;
+const CHART_WIDTH = 1600;
+const CHART_HEIGHT = 640;
 const CHART_SIDE_PADDING = 16;
 const MIN_VALUE = 20;
 const MAX_VALUE = 80;
@@ -80,72 +80,19 @@ export const LineChart: React.FC = () => {
 					flexDirection: 'column',
 					fontFamily,
 					fontVariantNumeric: 'tabular-nums',
-					gap: 84,
 					height: '100%',
 					justifyContent: 'center',
-					translate: '30px 0px',
 					width: '100%',
 				}}
 			>
-				<Interactive.H1
-					name="Title"
-					style={{
-						color: '#111827',
-						fontSize: 76,
-						fontWeight: 800,
-						letterSpacing: -3.8,
-						lineHeight: 0.95,
-						margin: 0,
-						translate: '0px -32px',
-					}}
-				>
-					Monthly active users
-				</Interactive.H1>
 				<Interactive.Div
 					name="Plot area"
 					style={{
-						height: 520,
+						height: CHART_HEIGHT,
 						marginBottom: 64,
 						position: 'relative',
 					}}
 				>
-					<div
-						style={{
-							color: '#4b5563',
-							fontSize: 40,
-							fontWeight: 700,
-							height: '100%',
-							position: 'absolute',
-							right: `calc(${100 - (CHART_SIDE_PADDING / CHART_WIDTH) * 100}% + 64px)`,
-							top: 0,
-							width: 94,
-						}}
-					>
-						{Y_AXIS_VALUES.map((value) => (
-							<div
-								key={value}
-								style={{
-									position: 'absolute',
-									right: 0,
-									top: `${((MAX_VALUE - value) / (MAX_VALUE - MIN_VALUE)) * 100}%`,
-									transform: 'translateY(-50%)',
-									width: '100%',
-								}}
-							>
-								<Interactive.Div
-									name="Y-axis label"
-									style={{
-										textAlign: 'right',
-										translate: '0px 0px',
-										whiteSpace: 'nowrap',
-										width: '100%',
-									}}
-								>
-									{value}K
-								</Interactive.Div>
-							</div>
-						))}
-					</div>
 					<svg
 						viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
 						preserveAspectRatio="none"
@@ -271,7 +218,6 @@ export const LineChart: React.FC = () => {
 								color: '#ffffff',
 								fontSize: 44,
 								fontWeight: 800,
-								letterSpacing: -1.5,
 								lineHeight: 1,
 								padding: '18px 24px',
 								scale: `${latestValueProgress}`,

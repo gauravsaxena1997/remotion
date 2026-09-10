@@ -185,26 +185,11 @@ export const VerticalBarChart: React.FC = () => {
 					flexDirection: 'column',
 					fontFamily,
 					fontVariantNumeric: 'tabular-nums',
-					gap: 42,
 					height: '100%',
 					justifyContent: 'center',
 					width: '100%',
 				}}
 			>
-				<Interactive.H1
-					name="Title"
-					style={{
-						color: '#111827',
-						fontSize: 76,
-						fontWeight: 800,
-						letterSpacing: -3.8,
-						lineHeight: 0.95,
-						margin: 0,
-						translate: '0px 0px',
-					}}
-				>
-					Browser tabs open
-				</Interactive.H1>
 				<div
 					style={{
 						alignSelf: 'center',

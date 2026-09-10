@@ -117,7 +117,7 @@ const ElementCard: React.FC<{
 						className={styles.previewMedia}
 						decoding="async"
 						loading="lazy"
-						src={`${definition.preview.posterUrl}?cache=bust`}
+						src={`${definition.preview.posterUrl}?cache=bust-3`}
 					/>
 					{shouldPlay ? (
 						<video
@@ -128,9 +128,9 @@ const ElementCard: React.FC<{
 							muted
 							onError={() => setPlaybackFailed(true)}
 							playsInline
-							poster={`${definition.preview.posterUrl}?cache=bust`}
+							poster={`${definition.preview.posterUrl}?cache=bust-3`}
 							preload="metadata"
-							src={`${definition.preview.videoUrl}?cache=bust`}
+							src={`${definition.preview.videoUrl}?cache=bust-3`}
 						/>
 					) : null}
 				</div>

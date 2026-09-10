@@ -13,7 +13,7 @@ const data = [
 	{highlighted: false, label: 'Mehmet', value: 10},
 ];
 
-const HEIGHT = Math.round(400 / data.length);
+const HEIGHT = Math.round(500 / data.length);
 
 const maxValue = Math.max(...data.map(({value}) => value));
 
@@ -103,25 +103,12 @@ export const HorizontalBarChart: React.FC = () => {
 					flexDirection: 'column',
 					fontFamily,
 					fontVariantNumeric: 'tabular-nums',
-					gap: 42,
+					gap: 32,
 					height: '100%',
 					justifyContent: 'center',
 					width: '100%',
 				}}
 			>
-				<Interactive.H1
-					name="Title"
-					style={{
-						fontSize: 76,
-						fontWeight: 800,
-						letterSpacing: -3.8,
-						lineHeight: 0.95,
-						margin: 0,
-						color: '#111827',
-					}}
-				>
-					Team member pull-ups
-				</Interactive.H1>
 				{data.map(({highlighted, label, value}, index) => (
 					<div
 						key={label}

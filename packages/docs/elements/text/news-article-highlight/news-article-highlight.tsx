@@ -63,18 +63,8 @@ export const NewsArticleHighlight: React.FC = () => {
 						extrapolateLeft: 'clamp',
 						extrapolateRight: 'clamp',
 					}),
-					translate: interpolate(
-						frame,
-						[0, 149],
-						['-36px 18px', '36px -18px'],
-						{
-							easing: Easing.linear,
-							extrapolateLeft: 'clamp',
-							extrapolateRight: 'clamp',
-						},
-					),
 					width: 1420,
-					willChange: 'opacity, transform',
+					willChange: 'opacity',
 				}}
 			>
 				<article

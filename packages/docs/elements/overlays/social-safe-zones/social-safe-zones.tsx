@@ -62,6 +62,21 @@ const SocialSafeZonesInner = forwardRef<
 			>
 				<CanvasImage
 					aria-hidden="true"
+					fit="cover"
+					height={1920}
+					name="Background"
+					src="https://remotion.media/elements/commerce-tear-a-graphic.png"
+					style={{
+						height: '100%',
+						left: 0,
+						position: 'absolute',
+						top: 0,
+						width: '100%',
+					}}
+					width={1080}
+				/>
+				<CanvasImage
+					aria-hidden="true"
 					fit="contain"
 					height={1920}
 					showInTimeline={false}

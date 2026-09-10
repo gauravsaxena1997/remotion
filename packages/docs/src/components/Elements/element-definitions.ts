@@ -9,6 +9,7 @@ import {AudioOscilloscope} from '../../../elements/audio/oscilloscope/audio-osci
 import {AudioWaveformProgress} from '../../../elements/audio/waveform-progress/audio-waveform-progress';
 import {LiquidContours} from '../../../elements/backgrounds/liquid-contours/liquid-contours';
 import {MovingWaves} from '../../../elements/backgrounds/moving-waves/moving-waves';
+import {MovingZigzags} from '../../../elements/backgrounds/moving-zigzags/moving-zigzags';
 import {NotebookPaper} from '../../../elements/backgrounds/notebook-paper/notebook-paper';
 import {PaperTexture} from '../../../elements/backgrounds/paper-texture/paper-texture';
 import {RotatingStarburst} from '../../../elements/backgrounds/rotating-starburst/rotating-starburst';
@@ -31,6 +32,8 @@ import {LineChart} from '../../../elements/data/line-chart/line-chart';
 import {NumberCounter} from '../../../elements/data/number-counter/number-counter';
 import {PieChart} from '../../../elements/data/pie-chart/pie-chart';
 import {VerticalBarChart} from '../../../elements/data/vertical-bar-chart/vertical-bar-chart';
+import {PictureInPictureTransition} from '../../../elements/layouts/picture-in-picture-transition/picture-in-picture-transition';
+import {SlideToSplitScreen} from '../../../elements/layouts/slide-to-split-screen/slide-to-split-screen';
 import {MapFlyover} from '../../../elements/maps/map-flyover/a-to-b-map-flyover';
 import {WatercolorMap} from '../../../elements/maps/watercolor-map/watercolor-map';
 import {LocationLowerThird} from '../../../elements/overlays/location-lower-third/location-lower-third';
@@ -263,6 +266,31 @@ const elementImplementations = [
 				'https://remotion.media/elements/backgrounds-moving-waves-preview.mp4',
 		},
 		safeArea: 0,
+		initialProps: null,
+		installationMode: 'wrapped',
+		width: 1920,
+	},
+	{
+		slug: 'backgrounds/moving-zigzags',
+		component: MovingZigzags,
+		contributors: [],
+		description: 'A seamless zigzag background that flows upward.',
+		dependencies: [{name: '@remotion/effects', version: null}],
+		durationInFrames: 240,
+		elementHeight: null,
+		elementWidth: null,
+		fps: 30,
+		height: 1080,
+		posterFrame: 120,
+		preview: {
+			previewLayout: 'composition',
+			posterUrl:
+				'https://remotion.media/elements/backgrounds-moving-zigzags-preview.png',
+			videoUrl:
+				'https://remotion.media/elements/backgrounds-moving-zigzags-preview.mp4',
+		},
+		safeArea: 0,
+		initialProps: null,
 		installationMode: 'wrapped',
 		width: 1920,
 	},
@@ -599,6 +627,56 @@ const elementImplementations = [
 		width: 1920,
 	},
 	{
+		slug: 'layouts/picture-in-picture-transition',
+		component: PictureInPictureTransition,
+		contributors: [],
+		description:
+			'Animates an element from being fullscreen to being displayed in a box.',
+		dependencies: [],
+		durationInFrames: 150,
+		elementHeight: null,
+		elementWidth: null,
+		fps: 30,
+		height: 1080,
+		posterFrame: 75,
+		preview: {
+			previewLayout: 'composition',
+			posterUrl:
+				'https://remotion.media/elements/layouts-picture-in-picture-transition-preview.png',
+			videoUrl:
+				'https://remotion.media/elements/layouts-picture-in-picture-transition-preview.mp4',
+		},
+		safeArea: 0,
+		initialProps: null,
+		installationMode: 'wrapped',
+		width: 1920,
+	},
+	{
+		slug: 'layouts/slide-to-split-screen',
+		component: SlideToSplitScreen,
+		contributors: [],
+		description:
+			'A fullscreen scene that opens into a 60/40 split-screen layout.',
+		dependencies: [],
+		durationInFrames: 150,
+		elementHeight: null,
+		elementWidth: null,
+		fps: 30,
+		height: 1080,
+		posterFrame: 75,
+		preview: {
+			previewLayout: 'composition',
+			posterUrl:
+				'https://remotion.media/elements/layouts-slide-to-split-screen-preview.png',
+			videoUrl:
+				'https://remotion.media/elements/layouts-slide-to-split-screen-preview.mp4',
+		},
+		safeArea: 0,
+		initialProps: null,
+		installationMode: 'wrapped',
+		width: 1920,
+	},
+	{
 		slug: 'maps/map-flyover',
 		component: MapFlyover,
 		contributors: [],
@@ -730,8 +808,7 @@ const elementImplementations = [
 		slug: 'text/news-article-highlight',
 		component: NewsArticleHighlight,
 		contributors: [],
-		description:
-			'A gently panning news headline with animated passage highlights.',
+		description: 'A centered news headline with animated passage highlights.',
 		dependencies: [{name: '@remotion/rough-notation', version: null}],
 		durationInFrames: 150,
 		elementHeight: null,

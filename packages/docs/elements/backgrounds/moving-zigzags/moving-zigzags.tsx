@@ -1,8 +1,8 @@
-import {waves} from '@remotion/effects/waves';
+import {zigzag} from '@remotion/effects/zigzag';
 import React from 'react';
 import {Solid, useCurrentFrame, useVideoConfig} from 'remotion';
 
-export const MovingWaves: React.FC = () => {
+export const MovingZigzags: React.FC = () => {
 	const frame = useCurrentFrame();
 	const {durationInFrames, height, width} = useVideoConfig();
 
@@ -12,16 +12,15 @@ export const MovingWaves: React.FC = () => {
 			width={width}
 			height={height}
 			effects={[
-				waves({
+				zigzag({
 					colors: ['#dff4ff', '#7cc6ff'],
 					direction: 'horizontal',
-					thickness: 56,
+					thickness: 40,
 					gap: 0,
 					angle: 0,
-					offset: (frame / durationInFrames) * 448,
-					amplitude: 24,
+					offset: (frame / durationInFrames) * 480,
+					amplitude: 40,
 					wavelength: 160,
-					phase: 0,
 				}),
 			]}
 		/>

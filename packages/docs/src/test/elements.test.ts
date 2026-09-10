@@ -574,6 +574,7 @@ describe('Elements sidebar', () => {
 				items: [
 					'backgrounds/liquid-contours/index',
 					'backgrounds/moving-waves/index',
+					'backgrounds/moving-zigzags/index',
 					'backgrounds/notebook-paper/index',
 					'backgrounds/paper-texture/index',
 					'backgrounds/rotating-starburst/index',
@@ -604,9 +605,17 @@ describe('Elements sidebar', () => {
 				category: 'commerce',
 				label: 'Effects',
 				items: [
-					'commerce/product-collection/index',
 					'commerce/tear/index',
 					'commerce/product-discount-callout/index',
+				],
+			},
+			{
+				category: 'layouts',
+				label: 'Layouts',
+				items: [
+					'layouts/picture-in-picture-transition/index',
+					'commerce/product-collection/index',
+					'layouts/slide-to-split-screen/index',
 				],
 			},
 			{

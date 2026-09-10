@@ -4,6 +4,7 @@ export const elementCategories = [
 	{category: 'captions', label: 'Captions'},
 	{category: 'data', label: 'Charts & Data'},
 	{category: 'commerce', label: 'Effects'},
+	{category: 'layouts', label: 'Layouts'},
 	{category: 'maps', label: 'Maps'},
 	{category: 'overlays', label: 'Overlays'},
 	{category: 'storytelling', label: 'Storytelling'},
@@ -34,6 +35,10 @@ export const elementRegistry = {
 		category: 'backgrounds',
 		displayName: 'Moving Waves',
 	},
+	'backgrounds/moving-zigzags': {
+		category: 'backgrounds',
+		displayName: 'Moving Zigzags',
+	},
 	'backgrounds/notebook-paper': {
 		category: 'backgrounds',
 		displayName: 'Notebook Paper',
@@ -63,7 +68,7 @@ export const elementRegistry = {
 		displayName: 'Word Highlight Captions',
 	},
 	'commerce/product-collection': {
-		category: 'commerce',
+		category: 'layouts',
 		displayName: 'Rotating Cards',
 	},
 	'commerce/product-discount-callout': {
@@ -93,6 +98,14 @@ export const elementRegistry = {
 	'data/vertical-bar-chart': {
 		category: 'data',
 		displayName: 'Vertical Bar Chart',
+	},
+	'layouts/picture-in-picture-transition': {
+		category: 'layouts',
+		displayName: 'Picture in Picture Transition',
+	},
+	'layouts/slide-to-split-screen': {
+		category: 'layouts',
+		displayName: 'Slide to Split Screen',
 	},
 	'maps/map-flyover': {
 		category: 'maps',

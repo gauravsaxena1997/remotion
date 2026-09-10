@@ -605,6 +605,7 @@ describe('Elements sidebar', () => {
 				category: 'commerce',
 				label: 'Effects',
 				items: [
+					'commerce/shine/index',
 					'commerce/tear/index',
 					'commerce/product-discount-callout/index',
 				],
@@ -926,6 +927,7 @@ describe('Element preview definitions', () => {
 				elementHeight: definition.elementHeight,
 				elementWidth: definition.elementWidth,
 				fps: definition.fps,
+				htmlInCanvasFallbackVideoUrl: null,
 				previewLayout: definition.preview.previewLayout,
 				safeArea: definition.safeArea,
 			}),

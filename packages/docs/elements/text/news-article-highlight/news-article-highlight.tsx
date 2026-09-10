@@ -48,7 +48,6 @@ export const NewsArticleHighlight: React.FC = () => {
 		<AbsoluteFill
 			style={{
 				alignItems: 'center',
-				backgroundColor: '#ffffff',
 				display: 'flex',
 				justifyContent: 'center',
 				overflow: 'hidden',
@@ -69,7 +68,6 @@ export const NewsArticleHighlight: React.FC = () => {
 			>
 				<article
 					style={{
-						backgroundColor: '#ffffff',
 						boxSizing: 'border-box',
 						color: '#181816',
 						display: 'flex',

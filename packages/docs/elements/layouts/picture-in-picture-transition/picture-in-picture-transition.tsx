@@ -10,7 +10,8 @@ import {
 } from 'remotion';
 
 const TARGET_SCALE = 0.38;
-const TARGET_CROP = 0.06;
+const TARGET_HORIZONTAL_CROP = 0.335;
+const TARGET_VERTICAL_CROP = 0.06;
 const TARGET_MARGIN = 48;
 
 export const PictureInPictureTransition: React.FC = () => {
@@ -25,11 +26,12 @@ export const PictureInPictureTransition: React.FC = () => {
 		extrapolateLeft: 'clamp',
 		extrapolateRight: 'clamp',
 	});
-	const crop = TARGET_CROP * progress;
+	const horizontalCrop = TARGET_HORIZONTAL_CROP * progress;
+	const verticalCrop = TARGET_VERTICAL_CROP * progress;
 	const scale = interpolate(progress, [0, 1], [1, TARGET_SCALE]);
 	const targetX =
-		width - TARGET_MARGIN - (1 - TARGET_CROP) * width * TARGET_SCALE;
-	const targetY = TARGET_MARGIN - TARGET_CROP * height * TARGET_SCALE;
+		width - TARGET_MARGIN - (1 - TARGET_HORIZONTAL_CROP) * width * TARGET_SCALE;
+	const targetY = TARGET_MARGIN - TARGET_VERTICAL_CROP * height * TARGET_SCALE;
 
 	return (
 		<AbsoluteFill style={{overflow: 'hidden'}}>
@@ -63,10 +65,10 @@ export const PictureInPictureTransition: React.FC = () => {
 			</Interactive.Div>
 
 			<Interactive.Div
-				cropBottom={crop}
-				cropLeft={crop}
-				cropRight={crop}
-				cropTop={crop}
+				cropBottom={verticalCrop}
+				cropLeft={horizontalCrop}
+				cropRight={horizontalCrop}
+				cropTop={verticalCrop}
 				name="Scene A"
 				style={{
 					alignItems: 'center',

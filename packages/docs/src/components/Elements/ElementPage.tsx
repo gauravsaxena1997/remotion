@@ -180,12 +180,12 @@ export const ElementPage: React.FC<ElementPageProps> = ({
 				decoding="async"
 				draggable={false}
 				hidden
-				src={definition.preview.posterUrl}
+				src={`${definition.preview.posterUrl}?cache=bust`}
 			/>
 			<Head>
 				{Seo.renderVideo({
 					height: previewHeight,
-					url: definition.preview.videoUrl,
+					url: `${definition.preview.videoUrl}?cache=bust`,
 					width: previewWidth,
 				})}
 			</Head>

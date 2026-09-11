@@ -75,16 +75,8 @@
 	margin: 0;
 	font-family: 'GTPlanar';
 	font-size: 1.125rem;
-	font-weight: 500;
+	font-weight: 400;
 	text-wrap: balance;
-}
-
-.description {
-	margin: 2px 0 0;
-	color: var(--ifm-color-emphasis-800);
-	font-size: 1rem;
-	line-height: 1.6;
-	text-wrap: pretty;
 }
 
 @container element-library (min-width: 600px) {
@@ -99,10 +91,6 @@
 
 	.title {
 		font-size: 1rem;
-	}
-
-	.description {
-		font-size: 0.9375rem;
 	}
 }
 

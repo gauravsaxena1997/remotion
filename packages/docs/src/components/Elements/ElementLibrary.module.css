@@ -32,7 +32,7 @@
 	min-width: 0;
 	flex-direction: column;
 	overflow: hidden;
-	background: var(--ifm-background-surface-color);
+	background: transparent;
 	color: var(--ifm-font-color-base);
 	text-decoration: none;
 }
